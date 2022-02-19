@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Mono&family=PT+Sans&family=PT+Sans+Narrow&family=PT+Serif:ital@0;1&family=Roboto+Slab&display=swap');
+
+/* 
+ * Colors
+ * Gruvbox color palette from <https://github.com/morhetz/gruvbox>
+ */
+
+:root {
+  --dark0_hard: '#1d2021';
+  --dark0: '#282828';
+  --dark1: '#3c3836';
+  --dark2: '#504945';
+  --dark3: '#665c54';
+  --dark4: '#7c6f64';
+
+  --gray: '#928374';
+
+  --light0_hard: '#f9f5d7';
+  --light0: '#fbf1c7';
+  --light1: '#ebdbb2';
+  --light2: '#d5c4a1';
+  --light3: '#bdae93';
+  --light4: '#a89984';
+
+  --bright_red: '#fb4934';
+  --bright_green: '#b8bb26';
+  --bright_yellow: '#fabd2f';
+  --bright_blue: '#83a598';
+  --bright_purple: '#d3869b';
+  --bright_aqua: '#8ec07c';
+  --bright_orange: '#fe8019';
+
+  --neutral_red: '#cc241d';
+  --neutral_green: '#98971a';
+  --neutral_yellow: '#d79921';
+  --neutral_blue: '#458588';
+  --neutral_purple: '#b16286';
+  --neutral_aqua: '#689d6a';
+  --neutral_orange: '#d65d0e';
+
+  --faded_red: '#9d0006';
+  --faded_green: '#79740e';
+  --faded_yellow: '#b57614';
+  --faded_blue: '#076678';
+  --faded_purple: '#8f3f71';
+  --faded_aqua: '#427b58';
+  --faded_orange: '#af3a03';
+}
+
+/*
+ * Fonts
+ */
+:root {
+  --font_sans: 'PT Sans', sans-serif;
+  --font_narrow: 'PT Sans Narrow', sans-serif;
+  --font_serif: 'PT Serif', serif;
+  --font_mono: 'PT Mono', monospace;
+  --font_slab: 'Roboto Slab', serif;
+  --font_uppercase: 'Bebas Neue', sans-serif;
+}
+
+/* semantic color variables for this project */
+:root {
+  --bg0: var(--dark0_hard);
+  --bg1: var(--dark1);
+  --bg2: var(--dark2);
+  --bg3: var(--dark3);
+  --bg4: var(--dark4);
+
+  --fg4: var(--light4);
+  --fg3: var(--light3);
+  --fg2: var(--light2);
+  --fg1: var(--light1);
+  --fg0: var(--light0);
+
+  --red_bright: var(--bright_red);
+  --green_bright: var(--bright_green);
+  --yellow_bright: var(--bright_yellow);
+  --blue_bright: var(--bright_blue);
+  --purple_bright: var(--bright_purple);
+  --aqua_bright: var(--bright_aqua);
+  --orange_bright: var(--bright_orange);
+
+  --red_dark: var(--neutral_red);
+  --green_dark: var(--neutral_green);
+  --yellow_dark: var(--neutral_yellow);
+  --blue_dark: var(--neutral_blue);
+  --purple_dark: var(--neutral_purple);
+  --aqua_dark: var(--neutral_aqua);
+  --orange_dark: var(--neutral_orange);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg0: var(--light0_hard);
+    --bg1: var(--light1);
+    --bg2: var(--light2);
+    --bg3: var(--light3);
+    --bg4: var(--light4);
+
+    --fg4: var(--dark4);
+    --fg3: var(--dark3);
+    --fg2: var(--dark2);
+    --fg1: var(--dark1);
+    --fg0: var(--dark0);
+
+    --red_bright: var(--neutral_red);
+    --green_bright: var(--neutral_green);
+    --yellow_bright: var(--neutral_yellow);
+    --blue_bright: var(--neutral_blue);
+    --purple_bright: var(--neutral_purple);
+    --aqua_bright: var(--neutral_aqua);
+    --orange_bright: var(--neutral_orange);
+
+    --red_dark: var(--faded_red);
+    --green_dark: var(--faded_green);
+    --yellow_dark: var(--faded_yellow);
+    --blue_dark: var(--faded_blue);
+    --purple_dark: var(--faded_purple);
+    --aqua_dark: var(--faded_aqua);
+    --orange_dark: var(--faded_orange);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-height: 100vh;
+  background: var(--bg0);
+  color: var(--fg1);
+}
