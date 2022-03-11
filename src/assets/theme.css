@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Mono&family=PT+Sans&family=PT+Sans+Narrow&family=PT+Serif:ital@0;1&family=Roboto+Slab&display=swap');
 
 /* 
- * Colors
+ * Base Colors
  * Gruvbox color palette from <https://github.com/morhetz/gruvbox>
  */
 
@@ -59,7 +59,9 @@
   --font_uppercase: 'Bebas Neue', sans-serif;
 }
 
-/* semantic color variables for this project */
+/*
+ * Semantic color names
+ */
 :root {
   --bg0: var(--dark0_hard);
   --bg1: var(--dark1);
@@ -90,6 +92,9 @@
   --orange_dark: var(--neutral_orange);
 }
 
+/*
+ * Dark is the default, media query for light theme
+ */
 @media (prefers-color-scheme: light) {
   :root {
     --bg0: var(--light0_hard);
@@ -120,4 +125,60 @@
     --aqua_dark: var(--faded_aqua);
     --orange_dark: var(--faded_orange);
   }
+}
+
+/*
+ * Global styles for all input types
+ */
+
+.input-wrapper {
+  display: flex;
+  margin: 1rem;
+}
+
+.input-label {
+  font-size: 1rem;
+}
+
+input,
+button {
+  margin: 0 1rem;
+
+  text-align: center;
+  font-size: 1rem;
+
+  outline: none;
+  border: none;
+  border-bottom: 5px solid var(--yellow_dark);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--fg1);
+
+  transition-duration: 200ms;
+}
+
+button {
+  padding: 0.5rem;
+
+  line-height: 1rem;
+
+  border: 2.5px solid var(--yellow_dark);
+
+  cursor: pointer;
+  border-width: 2.5px;
+}
+
+input[type='text']:hover,
+input[type='text']:focus,
+input[type='text']:active {
+  border-color: var(--fg1);
+  transition-duration: 200ms;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: var(--bg0);
+  background-color: var(--yellow_dark);
+  transition-duration: 200ms;
 }
